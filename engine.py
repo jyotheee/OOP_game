@@ -129,6 +129,7 @@ class Board(object):
         if not (0 <= y < self.height):
             raise IndexError("%r is out of bounds of the board height: %d"%(y, self.width))
 
+
     def get_el(self, x, y):
         self.check_bounds(x, y)
         return self.content_layer[y][x]
