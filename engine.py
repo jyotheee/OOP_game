@@ -25,6 +25,7 @@ def setup_images():
             "Block": "Plain Block.png",
             "GrassBlock": "Grass Block.png",
             "StoneBlock": "Stone Block.png",
+            "Water": "Water Block.png",
             "ShortTree": "Tree Short.png",
             "TallTree": "Tree Tall.png",
             "Rock": "Rock.png",
@@ -40,7 +41,8 @@ def setup_images():
             "Cat": "Character Cat Girl.png",
             "Horns": "Character Horn Girl.png",
             "Girl": "Character Pink Girl.png",
-            "Princess": "Character Princess Girl.png"
+            "Princess": "Character Princess Girl.png",
+            "Bug": "Enemy Bug.png"
             }
 
     for k,v in filenames.items():
@@ -55,6 +57,7 @@ def setup_images():
 
 class Board(object):
     def __init__(self, width = 3, height = 3):
+        self.gameover = False
         self.width = width
         self.height = height
 
